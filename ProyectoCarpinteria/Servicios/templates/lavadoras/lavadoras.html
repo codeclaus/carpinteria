@@ -1,0 +1,39 @@
+{% extends "PanelPrincipal/base.html" %} {% load static %} {% block content %}
+<h1 style="color: #3eff00; font-family: 'Georgia', 'Times New Roman', serif">
+  {{todas.name}}
+</h1>
+<div class="container">
+  <div class="row">
+    {% for j in lavadoras %}
+    <div class="col-md-3">
+      <div class="card" style="width: 100%">
+        <div style="width: 100%; height: auto">
+          <img
+            src="{{j.image.url}}"
+            class="card-img-top"
+            style="text-align: center"
+          />
+        </div>
+        <div class="card-body" style="text-align: center">
+          <h6 class="card-title" style="color: black">{{j.marca}}</h6>
+          <h7 class="card-title" style="color: black">Año {{j.modelo}}</h7>
+          <br />
+        </div>
+      </div>
+
+      <div class="card-footer text-center">
+        {% if request.user.is_authenticated and j.disponibilidad%}
+        <a href="#" class="btn btn-success">Solicitar!</a>
+        {% else %}
+        <a href="#" class="btn btn-danger">Ocupado!</a>
+        <div class="alert-danger text-center">No disponible</div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div style="text-align: center">
+  <a href="{% url 'categorias' %}" style="color: white"> << Back </a>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "PanelPrincipal/base.html" %} {% load static %} {% block content %}
+<h1 style="color: #3eff00; font-family: 'Georgia', 'Times New Roman', serif">
+  {{categorias.name}}
+</h1>
+{% for i in temas %}
+<article>
+  <header>
+    <div style="text-align:center">
+    <img
+    src="{{i.image.url}}"
+    class="card-img-top"
+    style="text-align: center; width: 50%; height: auto;"
+  />
+    </div>
+</div>
+      <h1 style="color:white">{{i.titulo}}</h1>
+      <p style="color:white">Publicado el <time datetime="2024-09-06" style="color:white">6 de septiembre de 2024</time> {{i.author}}</p>
+  </header>
+  <p style="color:white">{{i.comentario}}</p>
+  <footer>
+    {% if i.desarrollo == 1 %}
+      <p style="color:RED">TEMA EN DESARROLLO</p>
+      {% endif %}
+  </footer>
+  <div class="card-footer text-center">
+    {% if request.user.is_authenticated %}
+    <a href="#" class="btn btn-success">Ampliar o corregir!</a>
+    {% else %}
+    <a href="#" class="btn btn-danger">Solo Lectura!</a>
+    {% endif %}
+  </div>
+</article>
+{% endfor %}
+<div style="text-align: center">
+  <a href="{% url 'categorias' %}" style="color: white"> << Back </a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "PanelPrincipal/base.html" %} {% load static %} {% block content%}
+<!-- Heading -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img
+        class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+        src="{% static 'PanelPrincipal/img/chefs.jpg '%}"
+        alt=""
+      />
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">CALIDAD & COMPROMISO</span>
+          <span class="section-heading-lower">Promovemos!</span>
+        </h2>
+        <p class="mb-3">
+          Una cultura de trabajo que promueva el respeto, la cooperación y la
+          amabilidad entre los empleados. Horarios de trabajo equilibrados y
+          justos que permitan a los empleados tener una buena calidad de vida.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img
+        class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+        src="{% static 'PanelPrincipal/img/ptipicos.jpg '%}"
+        alt=""
+      />
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper"
+            >PLATOS TIPICOS DE NUESTRA TIERRA</span
+          >
+          <span class="section-heading-lower">Con sabor a Colombia</span>
+        </h2>
+        <p class="mb-3">
+          Rescatar la esencia de los sabores en la alta cocina es una forma de
+          preservar el patrimonio culinario, conectar con los orígenes y ofrecer
+          una experiencia gastronómica que va más allá del simple acto de comer,
+          convirtiéndose en un viaje sensorial y cultural.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Message -->
+<section class="page-section cta" style="margin: 10px 10px">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Compromiso total</span>
+            <span class="section-heading-lower">Garantizado</span>
+          </h2>
+          <p class="mb-0">
+            Con más de 30 años de recorrido en la ciudad, esta es una empresa
+            que está en constante crecimiento gracias al apoyo y la confianza
+            que nuestros clientes han puesto en nosotros. Seguiremos trabajando
+            por la mejora continua, entregando un servicio de calidad y amor!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
